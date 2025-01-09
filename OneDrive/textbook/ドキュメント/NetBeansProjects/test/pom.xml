@@ -30,5 +30,7 @@
         <maven.compiler.source>22</maven.compiler.source>
         <maven.compiler.target>22</maven.compiler.target>
         <exec.mainClass>fr.centrale.test.Test</exec.mainClass>
+        <sonar.organization>tatsuya0924</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 </project>
