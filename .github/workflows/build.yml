@@ -46,7 +46,7 @@ jobs:
 
       # 5. Build and analyze
       - name: Build and analyze with coverage
-        working-directory: textbook/ドキュメント/NetBeansProjects/test # プロジェクトのルートディレクトリを指定
+        working-directory: OneDrive/textbook/ドキュメント/NetBeansProjects/test # プロジェクトのルートディレクトリを指定
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
