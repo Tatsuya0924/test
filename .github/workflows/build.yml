@@ -36,4 +36,4 @@ jobs:
         working-directory: textbook/ドキュメント/NetBeansProjects/test
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=my-org_test-project -Dsonar.organization=tatsuya0924
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Tatsuya0924_test -Dsonar.organization=tatsuya0924
