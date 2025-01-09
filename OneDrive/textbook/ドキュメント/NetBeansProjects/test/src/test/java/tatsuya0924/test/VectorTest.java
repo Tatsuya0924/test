@@ -16,25 +16,25 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author woota
  */
 public class VectorTest {
-    
+
     public VectorTest() {
     }
-    
+
     @BeforeAll
     public static void setUpClass() {
         System.out.println("BeforeAll: Test class setup.");
     }
-    
+
     @AfterAll
     public static void tearDownClass() {
         System.out.println("AfterAll: Test class teardown.");
     }
-    
+
     @BeforeEach
     public void setUp() {
         System.out.println("BeforeEach: Test method setup.");
     }
-    
+
     @AfterEach
     public void tearDown() {
         System.out.println("AfterEach: Test method teardown.");
@@ -53,8 +53,17 @@ public class VectorTest {
         assertEquals(expResult, result);
 
         System.out.println("equal with null arguments");
+        // 修正: 実際に null を渡す
         assertThrows(IllegalArgumentException.class, () -> {
-            Vector.equal(a, b);
+            Vector.equal(null, b);
+        });
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            Vector.equal(a, null);
+        });
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            Vector.equal(null, null);
         });
     }
 
@@ -71,8 +80,17 @@ public class VectorTest {
         assertEquals(expResult, result);
 
         System.out.println("scalarMultiplication with null arguments");
+        // 修正: 実際に null を渡す
         assertThrows(IllegalArgumentException.class, () -> {
-            Vector.scalarMultiplication(a, b);
+            Vector.scalarMultiplication(null, b);
+        });
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            Vector.scalarMultiplication(a, null);
+        });
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            Vector.scalarMultiplication(null, null);
         });
     }
 }

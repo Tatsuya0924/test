@@ -1,67 +1,47 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package tatsuya0924.test;
 
-/**
- *
- * @author woota
- */
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-public final class Vector {
-
-    private Vector() {}
+public class Vector {
 
     /**
-     * Checks whether the given vectors are equal.
-     * @param a
-     * @param b
-     * @return 
+     * 二つのベクトルが等しいかを判定します。
+     * @param a ベクトルa
+     * @param b ベクトルb
+     * @return 等しければ true
+     * @throws IllegalArgumentException 引数が null の場合
      */
     public static boolean equal(int[] a, int[] b) {
-        if ((a == null) || (b == null)) {
-            throw new IllegalArgumentException("null argument");
+        if (a == null || b == null) {
+            throw new IllegalArgumentException("引数は null であってはなりません。");
         }
-
         if (a.length != b.length) {
             return false;
         }
-
         for (int i = 0; i < a.length; i++) {
             if (a[i] != b[i]) {
                 return false;
             }
         }
-
         return true;
     }
 
     /**
-     * Scalar multiplication of given vectors.
-     * @param a
-     * @param b
-     * @return 
+     * 二つのベクトルのスカラー積を計算します。
+     * @param a ベクトルa
+     * @param b ベクトルb
+     * @return スカラー積
+     * @throws IllegalArgumentException 引数が null の場合
      */
     public static int scalarMultiplication(int[] a, int[] b) {
-        if ((a == null) || (b == null)) {
-            throw new IllegalArgumentException("null argument");
+        if (a == null || b == null) {
+            throw new IllegalArgumentException("引数は null であってはなりません。");
         }
-
         if (a.length != b.length) {
-            throw new IllegalArgumentException(
-                    "different tuple of the vectors ("
-                    + a.length + ", " + b.length + ')');
+            throw new IllegalArgumentException("ベクトルの長さが一致していません。");
         }
-
-        int sum = 0;
+        int result = 0;
         for (int i = 0; i < a.length; i++) {
-            sum += a[i] * b[i];
+            result += a[i] * b[i];
         }
-        return sum;
+        return result;
     }
-
 }
