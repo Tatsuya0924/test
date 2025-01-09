@@ -13,5 +13,7 @@ public class Test {
     public static void main(String[] args) {
         System.out.println("Hello World!");
         System.out.println("Commiting for sonar!");
+        System.out.println("Commiting for sonar!2");
+
     }
 }
