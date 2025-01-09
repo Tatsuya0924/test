@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package fr.centrale.test;
+package tatsuya0924.test;
 
 /**
  *
